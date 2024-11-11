@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.google-translate-container {
+  @apply inline-block relative;
+}
+
+.google-translate-container select {
+  @apply h-7 text-xs rounded-md border-gray-300 bg-white px-1.5 py-0 text-gray-700 shadow-sm 
+    hover:bg-gray-50 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 
+    appearance-none cursor-pointer w-[100px];
+}
+
+.goog-te-combo {
+  @apply !w-[100px];
+}
+
+/* Hide Google Translate attribution */
+.VIpgJd-ZVi9od-l4eHX-hSRGPd,
+.VIpgJd-ZVi9od-ORHb-OEVmcd {
+  @apply !hidden;
+}
+
+/* Adjust the banner that appears at the top */
+.goog-te-banner-frame {
+  @apply !hidden;
+}
+
+/* Custom dropdown arrow */
+.google-translate-container::after {
+  @apply content-[''] absolute right-2 top-1/2 -translate-y-1/2 border-4 border-transparent
+    border-t-gray-400 pointer-events-none;
+}
+
+/* Hover effect for the container */
+.google-translate-container:hover select {
+  @apply border-blue-300;
+}
+
+/* Active/Focus state */
+.google-translate-container select:focus {
+  @apply ring-2 ring-blue-200;
+}
+
+body {
+  @apply !top-0 !min-h-screen;
+}
+
+/* Hero section parallax effect */
+.hero-parallax {
+  @apply relative overflow-hidden;
+  perspective: 1000px;
+}
+
+.hero-parallax img {
+  @apply transition-transform duration-500;
+  transform: translateZ(0);
+}
+
+.hero-parallax:hover img {
+  transform: translateZ(50px);
+}
