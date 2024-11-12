@@ -3,7 +3,7 @@ import { useStore } from '../store/useStore';
 import { Trash2, Plus, Minus } from 'lucide-react';
 import { loadStripe } from '@stripe/stripe-js';
 
-const stripePromise = loadStripe('your_publishable_key'); // Replace with your Stripe publishable key
+const stripePromise = loadStripe('pk_test_51QKFVpFFrPzSB8tSBDVzZCwxvkdV27OGslX6ljXcva7XbcvZ1rNKVTwtCWi4Qfb7MKZ1XTDygFBrALIFREQiiYwW00E3Z5GQDd'); // Replace with your Stripe publishable key
 
 export const Cart = () => {
   const { cart, removeFromCart, updateQuantity } = useStore();
